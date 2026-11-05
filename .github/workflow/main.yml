@@ -24,8 +24,8 @@ jobs:
           pip install --upgrade pip
       - name: installing python module-pytest
         run: |
-        pip install pytest
+          pip install pytest
 
       - name: run the tests to validate the product management e-commerce app
         run: |
-        python -m pytest app.py -k product
+          python -m pytest app.py -k product
