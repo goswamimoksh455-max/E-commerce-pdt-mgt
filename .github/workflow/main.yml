@@ -9,7 +9,7 @@ on:
 jobs:
   validate:
     name : just the testing
-    runs-on: ubuntu-linux
+    runs-on: ubuntu-latest
     steps :
       name: pulling 
       uses: actions/checkout@v4
@@ -19,10 +19,13 @@ jobs:
       with :
         python: 3.13.15
 
-      # name: installing pip
-      # run: pip install pip 
+      name: installing pip
+      run: |
+        pip install --upgrade pip
       name: installing python module-pytest
-      run: pip install pytest
+      run: |
+       pip install pytest
 
       name: run the tests to validate the product management e-commerce app
-      run: python -m pytest app.py -k product
+      run: |
+       python -m pytest app.py -k product
