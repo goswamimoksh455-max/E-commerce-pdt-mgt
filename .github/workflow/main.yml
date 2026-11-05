@@ -8,6 +8,7 @@ on:
 
 jobs:
   validate:
+    name : just the testing
     runs-on: ubuntu-linux
     steps :
       name: pulling 
