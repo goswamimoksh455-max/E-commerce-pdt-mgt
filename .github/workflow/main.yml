@@ -2,9 +2,9 @@ name : Validation of the E-com pdt mng
 
 on:
   push:
-    branch: [main,feature]
+    branch: main
   pull:
-    branch: [main,feature]
+    branch: main
 
 jobs:
   validate:

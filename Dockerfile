@@ -11,10 +11,6 @@ RUN pip install --upgrade pip && \
 
 FROM python:3.12-slim AS runner
 
-ENV PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1 \
-    PATH="/opt/venv/bin:$PATH"
-
 WORKDIR /
 
 RUN groupadd -g 10001 appgroup && \
