@@ -11,21 +11,21 @@ jobs:
     name : just the testing
     runs-on: ubuntu-latest
     steps :
-      name: pulling 
-      uses: actions/checkout@v4
+      - name: pulling 
+        uses: actions/checkout@v4
 
-      name: installing of python
-      uses: actions/setup-python@v4
-      with :
-        python: 3.13.15
+      - name: installing of python
+        uses: actions/setup-python@v4
+        with :
+          python: 3.13.15
 
-      name: installing pip
-      run: |
-        pip install --upgrade pip
-      name: installing python module-pytest
-      run: |
-       pip install pytest
+      - name: installing pip
+        run: |
+          pip install --upgrade pip
+      - name: installing python module-pytest
+        run: |
+        pip install pytest
 
-      name: run the tests to validate the product management e-commerce app
-      run: |
-       python -m pytest app.py -k product
+      - name: run the tests to validate the product management e-commerce app
+        run: |
+        python -m pytest app.py -k product

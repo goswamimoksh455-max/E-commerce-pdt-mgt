@@ -9,11 +9,9 @@ def remove_product(p):
     product_list.remove(p)
 
 def get_product(name):
-    product = {}
-    for p in product_list :
-        if name == p.name :
-            print(p)
-            product = p
+    product = {"name":"abc"}
+    # for p in product_list :
+        
     return product
 
 def get_all():
